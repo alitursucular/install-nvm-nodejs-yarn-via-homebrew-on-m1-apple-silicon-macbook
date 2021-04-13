@@ -99,14 +99,11 @@ brew install yarn
 brew uninstall node --ignore-dependencies
 ```
 
-Create blank folder and create symbol link to node folder from nvm for yarn in Homebrew.
+Next, create a symbol link to node folder from nvm for yarn in Homebrew. 
+> Note: Below command will link a node folder to the _/opt/homebrew/Cellar_ from _~/.nvm/versions_ directory. If you already have a _node_ folder at the destination, the link attempt will fail.
 
 ```sh
-mkdir /opt/homebrew/Cellar/node
-```
-
-```sh
-ln -s ~/.nvm/versions/node/ /usr/local/Cellar
+ln -s ~/.nvm/versions/node/ /opt/homebrew/Cellar
 ```
 
 ### Step5: If you need to add/remove NodeJS versions in the future or upgrade Yarn
